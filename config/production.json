@@ -2,5 +2,5 @@
     "port": 5000,
     "jwtSecret": "dmytro yefremenko mern",
     "mongoUri": "mongodb+srv://dmytro:1q2w3e4r@cluster0.yfhoc.mongodb.net/app?retryWrites=true&w=majority",
-    "baseUrl": "https://shorterlink.herokuapp.com"
+    "baseUrl": "https://sl1nk.herokuapp.com"
 }
