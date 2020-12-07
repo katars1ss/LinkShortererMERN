@@ -30,7 +30,7 @@ export const CreatePage = () => {
 
     return (
         <div className="row">
-            <div className="col s8 offset-s2 createpage_container">
+            <div className="col s12 m10 offset-m1 l6 offset-l3 createpage_container">
                 <div className="card light-blue darken-1">
                     <div className="card-content white-text">
                         <span className="card-title center-align createpage_title">Скоротити посилання</span>  

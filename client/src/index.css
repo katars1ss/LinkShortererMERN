@@ -120,7 +120,7 @@ div.linkslist_oldlink_inner{
     height: 2.7em !important;
     max-height: 2.7em !important;
     line-height: 2.7em;
-    max-width: 30rem !important;
+    max-width: 25rem !important;
     white-space: no-wrap !important;
     overflow: scroll;
 }

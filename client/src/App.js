@@ -5,7 +5,7 @@ import { useAuth } from './hooks/auth.hook'
 import { AuthContext } from './context/AuthContext'
 import { Navbar } from './components/Navbar'
 import { Loader } from './components/Loader'
-import 'materialize-css'
+import M from 'materialize-css'
 
 function App() {
   const { token, login, logout, userId, ready } = useAuth() 
@@ -15,6 +15,9 @@ function App() {
   if (!ready){
     return <Loader />
   }
+
+  const elems = document.querySelectorAll('.sidenav');
+  const instances = M.Sidenav.init(elems, {});
 
   return (
     <AuthContext.Provider value={{
