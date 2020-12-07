@@ -1,0 +1,137 @@
+@import "~materialize-css/dist/css/materialize.min.css";
+
+.input-field label {
+    color: #ffffff91;
+}
+
+.input-field:focus + label {
+    color: #fdd835;
+}
+
+input.input_white{
+    color: #ffffff !important;
+    border-bottom: 1px solid #ffffff !important;
+}
+
+
+.input-field input:focus {
+    border-bottom: 1px solid #fdd835 !important;
+    box-shadow: 0 1px 0 0 #fdd835 !important;
+}
+
+.input-field input.valid {
+    border-bottom: 1px solid #ffffff;
+    box-shadow: 0 1px 0 0 #ffffff;
+}
+
+.input-field input.invalid {
+    border-bottom: 1px solid #ff5722;
+    box-shadow: 0 1px 0 0 #ff5722;
+}
+
+.input-field .prefix.active {
+    color: #fdd835;
+}
+
+/*input.input_white:focus:not([readonly]), 
+input.input_white:not(.browser-default):focus:not([readonly]){
+    color: #ffffff;
+    box-shadow: 0 1px 0 0 #fdd835;
+    border-bottom: 1px solid #fdd835;
+}*/
+
+input.input_white:focus:not([readonly])+label, 
+input.input_white:not(.browser-default):focus:not([readonly])+label,
+input.input_black:focus:not([readonly])+label, 
+input.input_black:not(.browser-default):focus:not([readonly])+label{
+    color: #fdd835;
+}
+
+.sign_in_btn{
+    margin-right: 10px;
+}
+
+/*    Preloader    */
+div.page_preloader{
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+/*    Navbar       */
+
+div.page_navbar{
+    padding: 0 2rem !important;
+}
+
+/*        Create Page          */
+
+div.createpage_container{
+    padding-top: 2rem;
+}
+
+span.createpage_title{
+    margin-bottom: 2rem !important;
+}
+
+
+/*        Details Page        */
+
+div.old_link_container{
+    display: flex;
+    height: 3em; 
+    line-height: 3em;
+}
+
+div.old_link_title{
+    white-space: nowrap;
+    padding-right: 4px;
+}
+
+div.old_link_a_container{
+    overflow: scroll;
+    padding-right: 0.5em !important;
+    white-space: nowrap;
+}
+
+a.old_link_a{
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 !important;
+}
+
+
+/*       Links Page         */
+
+tr.linklist_table_top > th{
+    padding: 15px 5px 15px 0 ;
+}
+
+i.table_sort_arrow{
+    font-size: 1rem !important;
+    line-height: normal !important;
+}
+
+td.linkslist_oldlink{
+    white-space: no-wrap !important;
+}
+
+div.linkslist_oldlink_inner{
+    height: 2.7em !important;
+    max-height: 2.7em !important;
+    line-height: 2.7em;
+    max-width: 30rem !important;
+    white-space: no-wrap !important;
+    overflow: scroll;
+}
+
+button.linklist_details{
+    padding: 0;
+}
+
+a.linklist_details_open{
+    display: block;
+    height: 100%;
+    padding: 0 16px;
+    color: #ffffff;
+}
