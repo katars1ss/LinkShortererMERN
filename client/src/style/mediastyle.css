@@ -92,6 +92,7 @@
 
     .input-field label {
         font-size: 0.7rem;
+        line-height: 0.7;
         margin-left: 2rem !important;
         width: calc(100% - 2rem) !important;
         transform: translateY(20px);

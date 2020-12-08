@@ -34,7 +34,7 @@ export const Navbar = () => {
                     <ul className="sidenav" id="mobile-demo">
                         <li><NavLink to="/create" className="sidenav-close">Створити</NavLink></li>
                         <li><NavLink to="/links" className="sidenav-close">Мої посилання</NavLink></li>
-                        <li><a href="/" onClick={logoutHandler}>Вийти</a></li>
+                        <li><a href="/" className="sidenav-close" onClick={logoutHandler}>Вийти</a></li>
                     </ul>
                 </div>
             </div>
