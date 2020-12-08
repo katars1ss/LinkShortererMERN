@@ -14,7 +14,7 @@ export const LinksList = ({ links }) => {
         return <h5 className="center">У вас поки нема посилань</h5>
     }
     return (
-            <table className="responsive-table striped">
+            <table className="striped">
             <thead>
             <tr className="linklist_table_top">
                 <th>

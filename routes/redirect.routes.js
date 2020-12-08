@@ -2,6 +2,7 @@ const {Router} = require('express')
 const Link = require('../models/Link')
 const router = Router()
 
+
 router.get('/:code', async (req,res) => {
     try {
         
@@ -16,7 +17,8 @@ router.get('/:code', async (req,res) => {
         res.status(404).json('Посилання не знайдено')
 
     } catch (e) {
-        res.status(500).json({ message: 'Щось пішло не так, спробуйте ще раз' })
+        message
+        res.status(500).json({ message:'Щось пішло не так, спробуйте ще раз' })
     }
 })
 

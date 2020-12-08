@@ -13,6 +13,7 @@ export const CreatePage = () => {
  
     useEffect(() => {
         window.M.updateTextFields()
+        
     }, [])
 
     const pressHandler = async event => {
@@ -38,14 +39,13 @@ export const CreatePage = () => {
                             <i className="material-icons prefix">link</i>
                             <input 
                                 id="link" 
-                                type="text" 
+                                type="url" 
                                 className="input_white"
                                 value={link}
                                 onChange={e => setLink(e.target.value)}
                                 onKeyPress={pressHandler}
-                                //onBlur={blurHandler}
                             />
-                            <label htmlFor="link">Вставте посилання у поле і натисніть Введення</label>
+                            <label htmlFor="link">Вставте посилання і натисніть Enter</label>
                         </div>
                         <div className="center-align">
                             <button 

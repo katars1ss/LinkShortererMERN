@@ -16,7 +16,7 @@ export const Navbar = () => {
         <nav>
             <div className="nav-wrapper light-blue darken-1 page_navbar">
                 <div className="container">
-                        <span className="brand-logo">Sl1nk</span>
+                        <span className="brand-logo">SL1nk</span>
                         <a href="#" data-target="mobile-demo" className="sidenav-trigger" ><i className="material-icons">menu</i></a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li><NavLink to="/create">Створити</NavLink></li>

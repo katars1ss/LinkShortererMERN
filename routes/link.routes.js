@@ -13,16 +13,20 @@ router.post('/generate', auth, async (req, res) => {
 
         const code = shortid.generate()
 
-        const existing = await Link.findOne({ from })
-
-        if (existing){
-            return res.json({ link: existing })
-        }
+        const re = /(?:https|http):\/\//
+        const matches = from.match(re)
         
-        const to = baseUrl + "/t/" + code
+        const newfrom = matches ? from : "https://" + from
+        //const existing = await Link.findOne({ from })
+
+        /*if (existing){
+            return res.json({ link: existing })
+        }*/
+
+        const to = baseUrl + "/" + code
 
         const link = new Link({
-            code, to, from, owner: req.user.userId
+            code, to, from:newfrom, owner: req.user.userId
         })
 
         await link.save()

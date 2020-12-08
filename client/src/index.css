@@ -13,21 +13,24 @@ input.input_white{
     border-bottom: 1px solid #ffffff !important;
 }
 
+/* .input-field input.valid {
+    border-bottom: 1px solid #ffffff !important;
+    box-shadow: 0 1px 0 0 #ffffff !important;
+} */
 
 .input-field input:focus {
     border-bottom: 1px solid #fdd835 !important;
     box-shadow: 0 1px 0 0 #fdd835 !important;
 }
 
-.input-field input.valid {
-    border-bottom: 1px solid #ffffff;
-    box-shadow: 0 1px 0 0 #ffffff;
+/* .input-field input.invalid {
+    border-bottom: 1px solid #ff7a22 !important;
+    box-shadow: 0 1px 0 0 #ff7a22 !important;
 }
 
-.input-field input.invalid {
-    border-bottom: 1px solid #ff5722;
-    box-shadow: 0 1px 0 0 #ff5722;
-}
+.input-field input.invalid + label{
+    color: #ff7a22 !important;
+} */
 
 .input-field .prefix.active {
     color: #fdd835;
@@ -98,6 +101,7 @@ a.old_link_a{
     max-width: 100%;
     overflow: hidden;
     padding: 0 !important;
+    white-space: nowrap !important;
 }
 
 
@@ -121,6 +125,8 @@ div.linkslist_oldlink_inner{
     max-height: 2.7em !important;
     line-height: 2.7em;
     max-width: 25rem !important;
+    min-width: 18rem !important;
+    width: auto !important;
     white-space: no-wrap !important;
     overflow: scroll;
 }

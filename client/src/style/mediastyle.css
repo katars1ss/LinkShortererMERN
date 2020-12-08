@@ -3,3 +3,74 @@
         width: 80%;
     }
 }
+
+@media screen and (max-width: 600px) {
+    table {
+        margin-top: 1rem;
+        border: 0;
+        margin-left: 15px;
+        width: 90%;
+    }
+    
+    table caption {
+        font-size: 1.3em;
+    }
+    
+    table thead {
+        border: none;
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+    
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: 3.2em;
+    }
+    
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: left;
+    }
+    
+    table td:first-child{
+        position: absolute;
+        left: 10px;
+        border-bottom: none;
+        font-size: 1.5em;
+        margin-top: -2.2em;
+        font-weight: bold;
+    }
+    
+    table td:nth-child(2){
+        margin-top: 2.2em;
+    }
+    
+    table td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    
+    table td:last-child {
+        border-bottom: 0;
+    }
+    
+    button.linklist_details{
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    div.linkslist_oldlink_inner{
+        max-width: 18rem !important;
+    }
+}
