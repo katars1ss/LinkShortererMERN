@@ -1,6 +1,7 @@
 import { useState, useCallback, useContext } from "react"
 import { AuthContext } from "../context/AuthContext"
 import {useHistory} from 'react-router-dom'
+import {useMessage} from '../hooks/message.hook'
 
 
 export const useHttp = () => {
@@ -8,11 +9,13 @@ export const useHttp = () => {
     const [error, setError] = useState(null)
     const auth = useContext(AuthContext)
     const history = useHistory()
+    const message = useMessage()
 
-    const logoutHandler = () => {
-        auth.logout()
-        history.push('/')
-    }
+    // const loginExpired = () => {
+    //     message('Час сесії минув, пройдіть авторизацію')
+    //     auth.logout()
+    //     history.push('/')
+    // }
 
     const request = useCallback( async (url, method = 'GET', body = null, headers = {}) => {
         setLoading(true)
@@ -25,8 +28,12 @@ export const useHttp = () => {
             const data = await response.json()
 
             if (!response.ok) {
-                logoutHandler()
-                throw new Error(data.message || 'Щось пішло не так')
+                if (!auth.isAuthenticated) {
+                    message('Час сесії минув, пройдіть авторизацію')
+                    auth.logout()
+                    history.push('/')
+                }
+                throw new Error(data.message || 'Щось пішло не так або час сесії користувача минув')
             }
 
             setLoading(false)
@@ -37,7 +44,7 @@ export const useHttp = () => {
             setError(e.message)
             throw e
         }
-    }, [])
+    }, [auth, message, history])
 
     const clearError = useCallback(() => setError(null), [])
 

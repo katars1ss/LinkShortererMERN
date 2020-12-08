@@ -67,10 +67,38 @@
         display: block;
         margin: 0 auto;
     }
+
 }
 
 @media screen and (max-width: 460px) {
     div.linkslist_oldlink_inner{
         max-width: 18rem !important;
     }
+
+    .card-content{
+        padding: 20px !important;
+    }
+
+    .input-field input{
+        margin-left: 2rem !important;
+        width: calc(100% - 2rem) !important;
+    }
+    
+    .input-field .prefix{
+        font-size: 1.5rem;
+        width: 1.5rem;
+        line-height: 2rem;
+    }
+
+    .input-field label {
+        font-size: 0.7rem;
+        margin-left: 2rem !important;
+        width: calc(100% - 2rem) !important;
+        transform: translateY(20px);
+    }
+    
+    .input-field label.active {
+        transform: translateY(-10px) !important;
+    }
+    
 }
