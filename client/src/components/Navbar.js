@@ -2,6 +2,7 @@ import { AuthContext } from 'context/AuthContext'
 import React, { useContext } from 'react'
 import { NavLink, useHistory } from 'react-router-dom'
 import M from 'materialize-css'
+import logo from '../image/logo.png'
 
 export const Navbar = () => {
     const history = useHistory()
@@ -24,7 +25,7 @@ export const Navbar = () => {
         <nav>
             <div className="nav-wrapper light-blue darken-1 page_navbar">
                 <div className="container">
-                        <span className="brand-logo">SL1nk</span>
+                        <span className="brand-logo"><img src={logo} alt="SL1nk" className="logo_img"/></span>
                         <a href="/" data-target="mobile-demo" className="sidenav-trigger" onClick={sidenavHandler}><i className="material-icons">menu</i></a>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li><NavLink to="/create">Створити</NavLink></li>

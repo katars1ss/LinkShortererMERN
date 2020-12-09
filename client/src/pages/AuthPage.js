@@ -2,6 +2,7 @@ import React, {useContext, useEffect, useState} from 'react'
 import {useHttp} from '../hooks/http.hook'
 import {useMessage} from '../hooks/message.hook'
 import { AuthContext } from '../context/AuthContext'
+import logo from '../image/logo.png'
 
 export const AuthPage = () => {
     const auth = useContext(AuthContext)
@@ -48,7 +49,7 @@ export const AuthPage = () => {
     return (
         <div className="row">
             <div className="col s12 m10 offset-m1 l6 offset-l3 center-align">
-                <h1>SL1nk</h1>
+                <h1><img src={logo} alt="SL1nk" className="logo_img_big"/></h1>
                 <div className="card light-blue darken-1">
                     <div className="card-content white-text">
                         <span className="card-title center-align">Авторизація</span>  

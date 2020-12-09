@@ -5,6 +5,15 @@
 }
 
 @media screen and (max-width: 600px) {
+
+    nav .brand-logo {
+        line-height: 78px;
+    }
+
+    .logo_img{
+        width: 120px;
+    }
+
     table {
         margin-top: 1rem;
         border: 0;
@@ -71,6 +80,11 @@
 }
 
 @media screen and (max-width: 460px) {
+    
+    .logo_img_big{
+        width: 250px;
+    }
+
     div.linkslist_oldlink_inner{
         max-width: 18rem !important;
     }

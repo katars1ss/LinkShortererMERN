@@ -1,5 +1,18 @@
 @import "~materialize-css/dist/css/materialize.min.css";
 
+nav .brand-logo {
+    display: block;
+    line-height: 96px;
+}
+
+.logo_img{
+    width: 150px;
+}
+
+.logo_img_big{
+    width: 400px;
+}
+
 .input-field label {
     color: #ffffff91;
 }
