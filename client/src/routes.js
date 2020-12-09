@@ -18,8 +18,8 @@ export const useRoutes = isAuthenticated => {
                 <Route path="/detail/:id" exact>
                     <DetailPage/>
                 </Route>
-                <Route path="/:code">
-                    return false
+                <Route path="/*">
+                    return true
                 </Route>
                 <Redirect to="/create"/>
             </Switch>
