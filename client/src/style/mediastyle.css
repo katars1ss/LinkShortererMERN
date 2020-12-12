@@ -1,18 +1,17 @@
+
 @media only screen and (min-width: 993px) {
     .container {
         width: 80%;
     }
 }
 
-@media screen and (max-width: 600px) {
-
-    nav .brand-logo {
-        line-height: 78px;
+@media only screen and (max-width: 1045px) {
+    div.linkslist_oldlink_inner{
+        width: 18rem !important;
     }
+}
 
-    .logo_img{
-        width: 120px;
-    }
+@media screen and (max-width: 845px) {
 
     table {
         margin-top: 1rem;
@@ -71,12 +70,16 @@
     table td:last-child {
         border-bottom: 0;
     }
-    
-    button.linklist_details{
-        display: block;
-        margin: 0 auto;
-    }
+}
 
+@media screen and (max-width: 600px) {
+    .logo_img{
+        width: 120px;
+    }
+    
+    nav .brand-logo {
+        line-height: 78px;
+    }
 }
 
 @media screen and (max-width: 460px) {

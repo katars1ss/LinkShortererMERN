@@ -24,7 +24,7 @@ export const useHttp = () => {
 
             if (!response.ok) {
 
-                if(response.status == 401){
+                if(response.status === 401){
                     message('Час сессії минув, будь ласка авторизуйтесь')
                     auth.logout()
                     history.push('/')

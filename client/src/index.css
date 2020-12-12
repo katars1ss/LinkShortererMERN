@@ -154,3 +154,12 @@ a.linklist_details_open{
     padding: 0 16px;
     color: #ffffff;
 }
+
+td.linkslist_buttons{
+    display: flex;
+    justify-content: center;
+}
+
+button.linklist_details{
+    margin-right: 5px;
+}

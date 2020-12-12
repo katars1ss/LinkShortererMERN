@@ -10,8 +10,8 @@ const router = Router()
 router.post(
     '/register', 
     [
-        check('email', 'Введено неправильну імейл адресу. Будь ласка, перевірте формат ****@*.com').isEmail(),
-        check('password', 'Мінімальна довжина паролю 6 символів').isLength({ min: 6 })
+        check('email', 'Перевірте формат імейлу ****@*.com').isEmail(),
+        check('password', 'Мінімальна довжина пароля 6 символів').isLength({ min: 6 })
     ],
     async (req, res) => {
     try {

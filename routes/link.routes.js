@@ -55,4 +55,15 @@ router.get('/:id', auth, async (req, res) => {
     }
 })
 
+router.get('/delete', auth, async (req, res) => {
+    try {
+        console.log("Router req.params.id: ", req.params.id)
+        const link = await Link.findById(req.params.id)
+        await link.remove()
+        res.status(200).json({message: `Посилання #${id} видалено з БД`})
+    } catch (e) {
+        res.status(500).json({ message: 'Щось пішло не так, спробуйте ще раз' })
+    }
+})
+
 module.exports = router
