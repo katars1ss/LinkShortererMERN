@@ -41,7 +41,7 @@ export const useHttp = () => {
             setError(e.message)
             throw e
         }
-    }, [])
+    }, [message, auth, history])
 
     const clearError = useCallback(() => setError(null), [])
 

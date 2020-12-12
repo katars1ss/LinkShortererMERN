@@ -1,16 +1,15 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { useHttp } from '../hooks/http.hook'
 import {useMessage} from '../hooks/message.hook'
 import {AuthContext} from '../context/AuthContext'
-import {Link, useHistory} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export const LinksList = ({ links }) => {
 
     const { loading, request } = useHttp()
-    const [link] = useState('')
     const message = useMessage()
     const auth = useContext(AuthContext)
-    const history = useHistory()
+    //const history = useHistory()
 
     const sortHandler = event => {
         event.preventDefault()
@@ -21,15 +20,19 @@ export const LinksList = ({ links }) => {
     }
 
     const deleteHandler = async event => {
-        //if(event.key === 'Enter' || event.target.id === "createLink"){}
             try {
-                console.log(event.target.getAttribute('name'))
-                const data = await request('/api/link/delete', 'DELETE', {id: event.target.getAttribute('name')}, {
-                    Authorization: `Bearer ${auth.token}`
-                })
-
-                message('Видалено скорочене посилання')
-                //history.push(`/links`)
+                const linkId = event.currentTarget.getAttribute('name')
+                const deleteConfirmed = window.confirm("Видалити посилання?");
+                if (deleteConfirmed) {
+                    await request('/api/link/delete/' + linkId, 'DELETE', {}, {
+                        Authorization: `Bearer ${auth.token}`
+                    })
+                    
+                    message('Видалено скорочене посилання')
+                    window.location.reload()
+                    return
+                }
+                message('Скасовано')
             } catch (e) {}      
     }
 
