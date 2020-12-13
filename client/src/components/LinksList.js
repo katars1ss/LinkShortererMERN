@@ -41,39 +41,16 @@ export const LinksList = ({ links }) => {
             <thead>
             <tr className="linklist_table_top">
                 <th>
-                    <button 
-                        className="btn grey lighten-4 black-text waves-effect waves-dark"
-                        onClick={sortHandler}
-                        disabled={loading}
-                        >
-                            №
-                            {/* <i className="material-icons prefix table_sort_arrow">arrow_drop_down</i> */}
-                    </button>
+                    №
                 </th>
                 <th>
-                    <button 
-                        className="btn grey lighten-4 black-text waves-effect waves-dark"
-                        onClick={sortHandler}
-                        disabled={loading}
-                        >
-                            Коротке посилання
-                            {/* <i className="material-icons prefix table_sort_arrow">arrow_drop_down</i> */}
-                    </button>
+                    Коротке посилання       
                 </th>
                 <th>
-                    <button 
-                        className="btn grey lighten-4 black-text waves-effect waves-dark"
-                        onClick={sortHandler}
-                        disabled={loading}
-                        >
-                            Оригінальне посилання
-                            {/* <i className="material-icons prefix table_sort_arrow">arrow_drop_down</i> */}
-                    </button>
+                    Оригінальне посилання        
                 </th>
                 <th>
-                    <button className="btn grey lighten-4 black-text waves-effect waves-dark">
-                            Управління
-                    </button>
+                    Управління
                 </th>
             </tr>
             </thead>

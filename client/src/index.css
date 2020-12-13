@@ -121,7 +121,7 @@ a.old_link_a{
 /*       Links Page         */
 
 tr.linklist_table_top > th{
-    padding: 15px 5px 15px 0 ;
+    padding: 15px 5px 15px 5px ;
 }
 
 i.table_sort_arrow{
@@ -157,7 +157,6 @@ a.linklist_details_open{
 
 td.linkslist_buttons{
     display: flex;
-    justify-content: center;
 }
 
 button.linklist_details{
