@@ -142,6 +142,8 @@ div.linkslist_oldlink_inner{
     width: auto !important;
     white-space: no-wrap !important;
     overflow: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 
 button.linklist_details{
